@@ -9,19 +9,19 @@ import times from 'lodash/times';
 import moment from 'moment';
 import { stringify } from 'qs';
 import { FormattedDate } from 'react-intl';
-import { useQuery, setQuery } from '@apollo/react-hooks';
+import { useQuery, setQuery } from '@commercetools-frontend/application-shell';
 import { NO_VALUE_FALLBACK } from '@commercetools-frontend/constants';
 import PaginatedTable from '../paginated-table';
-import useEffectMock from '../../test-util/use-effect-mock';
+import useEffectMock from '../../test-utils/use-effect-mock';
 import {
   generateAttribute,
   generateContainer,
   generateContainerContext,
   generateCustomObject,
-} from '../../test-util';
+} from '../../test-utils';
 import * as ContainerContext from '../../context/container-context';
 import { TYPES } from '../container-form/constants';
-import GetCustomObjects from './get-custom-objects.rest.graphql';
+import GetCustomObjects from '../get-custom-objects.ctp.graphql';
 import CustomObjectsList from './custom-objects-list';
 import {
   DATE_FORMAT,

@@ -1,19 +1,8 @@
 {
+  "trailingComma": "es5",
   "singleQuote": true,
-  "proseWrap": "always",
+  "parser": "typescript",
   "overrides": [
-    {
-      "files": "*.js",
-      "options": {
-        "parser": "babel"
-      }
-    },
-    {
-      "files": "*.css",
-      "options": {
-        "parser": "css"
-      }
-    },
     {
       "files": "*.json",
       "options": {

@@ -14,7 +14,7 @@ import {
 } from '../container-form/constants';
 import AttributeInput from './attribute-input';
 import messages from './messages';
-import { generateContainer } from '../../test-util';
+import { generateContainer } from '../../test-utils';
 import { getValue } from './util';
 import AttributeField from './attribute-field';
 

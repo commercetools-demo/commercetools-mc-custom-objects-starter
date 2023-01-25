@@ -14,7 +14,7 @@ import {
   TYPES,
 } from '../container-form/constants';
 import AttributeField from './attribute-field';
-import { generateContainer } from '../../test-util';
+import { generateContainer } from '../../test-utils';
 import { getValue } from './util';
 import AttributeInput from './attribute-input';
 

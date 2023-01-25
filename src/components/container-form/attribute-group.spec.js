@@ -4,7 +4,7 @@ import faker from 'faker';
 import kebabCase from 'lodash/kebabCase';
 import times from 'lodash/times';
 import * as AppContext from '@commercetools-frontend/application-shell-connectors';
-import { LocalizedTextInput } from '@commercetools-uikit/inputs';
+import LocalizedTextInput from '@commercetools-uikit/localized-text-input';
 import { ATTRIBUTES, REFERENCE_BY, TYPES } from './constants';
 import AttributeGroup from './attribute-group';
 import ObjectAttributes from './object-attributes';

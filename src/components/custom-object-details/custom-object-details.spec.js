@@ -7,13 +7,13 @@ import {
   setMutation,
   setQuery,
   useQuery,
-} from '@apollo/react-hooks';
+} from '@commercetools-frontend/application-shell';
 import { FormattedMessage } from 'react-intl';
 import { mockShowNotification } from '@commercetools-frontend/actions-global';
 import { ConfirmationDialog } from '@commercetools-frontend/application-components';
 import ViewHeader from '../view-header';
 import { ROOT_PATH } from '../../constants';
-import { generateCustomObject } from '../../test-util';
+import { generateCustomObject } from '../../test-utils';
 import GetCustomObject from '../get-custom-object.rest.graphql';
 import DeleteCustomObject from '../delete-custom-object.rest.graphql';
 import CustomObjectDetails from './custom-object-details';

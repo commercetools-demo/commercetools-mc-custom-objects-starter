@@ -8,11 +8,11 @@ import {
   setMutation,
   setQuery,
   useQuery,
-} from '@apollo/react-hooks';
+} from '@commercetools-frontend/application-shell';
 import { mockShowNotification } from '@commercetools-frontend/actions-global';
 import { ConfirmationDialog } from '@commercetools-frontend/application-components';
 import ViewHeader from '../view-header';
-import { generateContainer } from '../../test-util';
+import { generateContainer } from '../../test-utils';
 import { ROOT_PATH } from '../../constants';
 import GetContainer from '../get-custom-object.rest.graphql';
 import DeleteContainer from '../delete-custom-object.rest.graphql';

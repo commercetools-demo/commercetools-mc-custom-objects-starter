@@ -6,7 +6,7 @@ import kebabCase from 'lodash/kebabCase';
 import times from 'lodash/times';
 import { FieldArray } from 'formik';
 import * as AppContext from '@commercetools-frontend/application-shell-connectors';
-import { LocalizedTextInput } from '@commercetools-uikit/inputs';
+import LocalizedTextInput from '@commercetools-uikit/localized-text-input';
 import LocalizedEnumAttributes from './localized-enum-attributes';
 
 const languages = times(2, faker.random.locale());

@@ -1,14 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { FormattedMessage } from 'react-intl';
-import { getMutation, setMutation } from '@apollo/react-hooks';
+import {
+  getMutation,
+  setMutation,
+} from '@commercetools-frontend/application-shell';
 import { mockShowNotification } from '@commercetools-frontend/actions-global';
 import { CONTAINER, ROOT_PATH } from '../../constants';
 import ContainerForm from '../container-form';
 import CreateContainer from './create-container';
 import CreateContainerCustomObject from '../update-custom-object.rest.graphql';
 import messages from './messages';
-import { generateFormValues } from '../../test-util';
+import { generateFormValues } from '../../test-utils';
 
 const formValues = generateFormValues();
 

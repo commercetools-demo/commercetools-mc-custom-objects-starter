@@ -3,11 +3,14 @@ import { shallow } from 'enzyme';
 import faker from 'faker';
 import kebabCase from 'lodash/kebabCase';
 import { FormattedMessage } from 'react-intl';
-import { getMutation, setMutation } from '@apollo/react-hooks';
+import {
+  getMutation,
+  setMutation,
+} from '@commercetools-frontend/application-shell';
 import { mockShowNotification } from '@commercetools-frontend/actions-global';
 import { ROOT_PATH } from '../../constants';
 import * as ContainerContext from '../../context/container-context';
-import { generateContainerContext } from '../../test-util';
+import { generateContainerContext } from '../../test-utils';
 import CreateCustomObjectMutation from '../update-custom-object.rest.graphql';
 import CreateCustomObject from './create-custom-object';
 import CustomObjectForm from '../custom-object-form';

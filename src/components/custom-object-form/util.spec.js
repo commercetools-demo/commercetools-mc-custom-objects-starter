@@ -5,7 +5,7 @@ import reduce from 'lodash/reduce';
 import times from 'lodash/times';
 import * as yup from 'yup';
 import { FormattedMessage } from 'react-intl';
-import { LocalizedTextInput } from '@commercetools-uikit/inputs';
+import LocalizedTextInput from '@commercetools-uikit/localized-text-input';
 import {
   REFERENCE_BY,
   REFERENCE_TYPES,
