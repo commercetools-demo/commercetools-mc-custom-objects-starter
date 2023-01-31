@@ -6,14 +6,14 @@ import { PERMISSIONS, entryPointUriPath } from './src/constants';
 const config = {
   name: 'Custom Objects',
   entryPointUriPath,
-  cloudIdentifier: 'gcp-eu',
+  cloudIdentifier: '${env:CLOUD_IDENTIFIER}',
   env: {
-    development: {
-      initialProjectKey: 'learn-pho',
-    },
     production: {
-      applicationId: 'TODO',
-      url: 'https://your_app_hostname.com',
+      applicationId: '${env:APPLICATION_ID}',
+      url: '${env:APPLICATION_URL}',
+    },
+    development: {
+      initialProjectKey: '${env:INITIAL_PROJECT_KEY}',
     },
   },
   oAuthScopes: {

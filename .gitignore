@@ -4,6 +4,7 @@ coverage/
 public/
 csp.json
 env.json
+.env.local
 .firebase/
 .firebaserc
 firebase.json
