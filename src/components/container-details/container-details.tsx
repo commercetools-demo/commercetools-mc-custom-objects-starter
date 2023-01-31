@@ -12,12 +12,12 @@ import {
 } from '@commercetools-frontend/constants';
 import Text from '@commercetools-uikit/text';
 import { useShowNotification } from '@commercetools-frontend/actions-global';
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import LoadingSpinner from '@commercetools-uikit/loading-spinner';
 import { ContentNotification } from '@commercetools-uikit/notifications';
 import Spacings from '@commercetools-uikit/spacings';
 import { useIsAuthorized } from '@commercetools-frontend/permissions';
-import { CONTAINER, PERMISSIONS, ROOT_PATH } from '../../constants';
+import { CONTAINER, PERMISSIONS } from '../../constants';
 
 import { getErrorMessage } from '../../helpers';
 import ContainerForm from '../container-form';
@@ -33,10 +33,8 @@ type Props = {
 };
 
 const ContainerDetails: FC<Props> = ({ onClose }) => {
-  const { id, projectKey } = useParams<{ id: string; projectKey: string }>();
-  const mainRoute = `/${projectKey}/${ROOT_PATH}/containers`;
+  const { id } = useParams<{ id: string }>();
   const intl = useIntl();
-  const history = useHistory();
   const showNotification = useShowNotification();
   const canManage = useIsAuthorized({
     demandedPermissions: [PERMISSIONS.Manage],

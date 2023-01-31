@@ -5,14 +5,13 @@ import {
   NOTIFICATION_KINDS_SIDE,
 } from '@commercetools-frontend/constants';
 import { useShowNotification } from '@commercetools-frontend/actions-global';
-import { useHistory, useParams } from 'react-router-dom';
 import {
   CustomFormDetailPage,
   CustomFormModalPage,
   FormModalPage,
 } from '@commercetools-frontend/application-components';
 import { useIsAuthorized } from '@commercetools-frontend/permissions';
-import { CONTAINER, PERMISSIONS, ROOT_PATH } from '../../constants';
+import { CONTAINER, PERMISSIONS } from '../../constants';
 import ContainerForm from '../container-form';
 
 import { emptyAttribute } from '../container-form/constants';
@@ -25,9 +24,6 @@ type Props = {
 
 const CreateContainer: FC<Props> = ({ onClose }) => {
   const intl = useIntl();
-  const history = useHistory();
-  const { projectKey } = useParams<{ projectKey: string }>();
-  const mainRoute = `/${projectKey}/${ROOT_PATH}/containers`;
   const showNotification = useShowNotification();
   const canManage = useIsAuthorized({
     demandedPermissions: [PERMISSIONS.Manage],

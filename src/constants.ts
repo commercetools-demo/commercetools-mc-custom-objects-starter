@@ -10,8 +10,6 @@ export const PERMISSIONS = entryPointUriPathToPermissionKeys(
 
 export const SORT_OPTIONS = { ASC: 'asc', DESC: 'desc' };
 
-export const ROOT_PATH = 'custom-objects';
-
 export const CONTAINER = 'mc-custom-object-schema';
 
 export const groupNames = {
