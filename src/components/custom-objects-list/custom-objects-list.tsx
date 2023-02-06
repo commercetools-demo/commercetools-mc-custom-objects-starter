@@ -70,14 +70,16 @@ const CustomObjectsList = () => {
   if (error) {
     return (
       <ContentNotification type="error">
-        <Text.Body>{getErrorMessage(error)}</Text.Body>
+        <Text.Body data-testid="loading-error">
+          {getErrorMessage(error)}
+        </Text.Body>
       </ContentNotification>
     );
   }
   if (loading) {
     return (
       <Spacings.Stack alignItems="center">
-        <LoadingSpinner />
+        <LoadingSpinner data-testid="loading-error"></LoadingSpinner>
       </Spacings.Stack>
     );
   }
@@ -239,11 +241,11 @@ const CustomObjectsList = () => {
       customTitleRow={
         <Spacings.Inline justifyContent="space-between">
           <Spacings.Inline alignItems="baseline">
-            <Text.Headline as="h2">
+            <Text.Headline as="h2" data-testid="title">
               {intl.formatMessage(messages.title)}
             </Text.Headline>
             {!!total && (
-              <Text.Body tone="secondary" data-testid="total-results">
+              <Text.Body tone="secondary" data-testid="subtitle">
                 <FormattedMessage
                   values={{ total }}
                   {...messages.titleResults}
@@ -282,7 +284,6 @@ const CustomObjectsList = () => {
               </Constraints.Horizontal>
               <Constraints.Horizontal max={'scale'}>
                 <TextFilter
-                  data-testid="key-filter"
                   placeholder={intl.formatMessage(messages.key)}
                   value={key}
                   onChange={setKey}
@@ -303,14 +304,8 @@ const CustomObjectsList = () => {
             </Link>
           </Spacings.Inline>
         )}
-        {error && (
-          <Text.Body
-            data-testid="loading-error"
-            intlMessage={messages.errorLoading}
-          />
-        )}
         {count > 0 ? (
-          <>
+          <div data-testid="custom-objects-list">
             <DataTable<NonNullable<TQuery['customObjects']['results']>[0]>
               isCondensed
               columns={columnDefinitions(intl)}
@@ -328,7 +323,7 @@ const CustomObjectsList = () => {
               onPerPageChange={perPage.onChange}
               totalItems={total}
             />
-          </>
+          </div>
         ) : (
           count === 0 && (
             <Text.Body

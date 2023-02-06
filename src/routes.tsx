@@ -70,7 +70,7 @@ const ApplicationRoutes = (_props: ApplicationRoutesProps) => {
 
   if (error) {
     return (
-      <ContentNotification type="error">
+      <ContentNotification type="error" data-testid="loading-error">
         <Text.Body>{getErrorMessage(error)}</Text.Body>
       </ContentNotification>
     );

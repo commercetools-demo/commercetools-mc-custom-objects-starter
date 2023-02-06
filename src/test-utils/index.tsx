@@ -6,13 +6,13 @@ import {
   type TRenderAppOptions,
   type TRenderAppWithReduxOptions,
 } from '@commercetools-frontend/application-shell/test-utils';
-import ApplicationRoutes from '../routes';
-import { entryPointUriPath , CONTAINER } from '../constants';
 import faker from 'faker';
 import kebabCase from 'lodash/kebabCase';
 import map from 'lodash/map';
 import reduce from 'lodash/reduce';
 import times from 'lodash/times';
+import { entryPointUriPath, CONTAINER } from '../constants';
+import ApplicationRoutes from '../routes';
 import {
   REFERENCE_BY,
   REFERENCE_TYPES,
@@ -29,8 +29,7 @@ const mergeWithDefaultOptions = (
     entryPointUriPath,
   },
   apolloClient: createApolloClient(),
-  };
-};
+});
 
 export const generateAttribute = ({
   type = faker.random.arrayElement(Object.values(TYPES)),
@@ -131,7 +130,7 @@ export const generateContainerContext = (
       ','
     )})`,
   };
-}
+};
 
 const renderApplication = (
   ui: ReactElement,
@@ -156,3 +155,6 @@ export {
   renderApplicationWithRoutes,
   renderApplicationWithRoutesAndRedux,
 };
+
+export { default as random } from './builder';
+export * from './types';

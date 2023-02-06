@@ -52,7 +52,7 @@ const TextFilter: FC<Props> = ({ value, onChange, onSubmit, placeholder }) => {
         onChange={(event) => onChange(event.target.value)}
       />
 
-      <div className={styles.iconContainer}>
+      <div className={styles.iconContainer} data-testid="key-filter">
         {filterPerformed ? (
           <SecondaryIconButton
             data-testid="clear-button"
